@@ -1,0 +1,12 @@
+# Mirrors what Google Colab ships with, for running the notebooks locally.
+# Setup:  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+statsmodels
+openpyxl      # read the .xlsx codebook
+openesm       # optional: download more ESM datasets
+ipykernel     # run notebooks in VS Code / Jupyter
+nbformat      # needed by plotly to render inside notebooks
