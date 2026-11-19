@@ -224,28 +224,36 @@ def line(x1, y1, x2, y2):
     _add(f'<line x1="{xs[0]}" y1="{xs[1]}" x2="{xs[2]}" y2="{xs[3]}" {_style(filled=False)}/>')
 
 
+def _rect(function_name, x, y, width, height):
+    xs = [_num(function_name, value) for value in (x, y, width, height)]
+    _add(f'<rect x="{xs[0]}" y="{xs[1]}" width="{xs[2]}" height="{xs[3]}" {_style()}/>')
+
+
 def rect(x, y, width, height):
     """A rectangle whose top-left corner is at (x, y)."""
-    xs = [_num("rect", value) for value in (x, y, width, height)]
-    _add(f'<rect x="{xs[0]}" y="{xs[1]}" width="{xs[2]}" height="{xs[3]}" {_style()}/>')
+    _rect("rect", x, y, width, height)
 
 
 def square(x, y, side):
     """A square whose top-left corner is at (x, y)."""
-    rect(x, y, side, side)
+    _rect("square", x, y, side, side)
+
+
+def _ellipse(function_name, x, y, width, height):
+    for value in (width, height):
+        _num(function_name, value)
+    xs = [_num(function_name, value) for value in (x, y, width / 2, height / 2)]
+    _add(f'<ellipse cx="{xs[0]}" cy="{xs[1]}" rx="{xs[2]}" ry="{xs[3]}" {_style()}/>')
 
 
 def ellipse(x, y, width, height):
     """An ellipse centred on (x, y)."""
-    for value in (width, height):
-        _num("ellipse", value)
-    xs = [_num("ellipse", value) for value in (x, y, width / 2, height / 2)]
-    _add(f'<ellipse cx="{xs[0]}" cy="{xs[1]}" rx="{xs[2]}" ry="{xs[3]}" {_style()}/>')
+    _ellipse("ellipse", x, y, width, height)
 
 
 def circle(x, y, diameter):
     """A circle centred on (x, y)."""
-    ellipse(x, y, diameter, diameter)
+    _ellipse("circle", x, y, diameter, diameter)
 
 
 def triangle(x1, y1, x2, y2, x3, y3):
