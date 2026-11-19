@@ -1,7 +1,7 @@
 """
 sketch.py: a tiny Processing-style drawing toolkit for Jupyter and Google Colab.
 
-    from sketch import *
+    from sketch import size, background, fill, circle
 
     size(400, 300)
     background("white")
