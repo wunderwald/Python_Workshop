@@ -1,4 +1,4 @@
-# Mirrors what Google Colab ships with, for running the notebooks locally.
+# Everything the workshop notebooks need.
 # Setup:  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 pandas
 numpy
