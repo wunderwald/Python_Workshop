@@ -1,0 +1,29 @@
+{
+  "participant_id": "P017",
+  "demographics": {
+    "age": 24,
+    "occupation": "student",
+    "languages": ["German", "English", "Spanish"]
+  },
+  "study": {
+    "name": "Daily Mood and Stress",
+    "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+    "prompts_sent": 56,
+    "prompts_answered": 42
+  },
+  "sleep_hours": {
+    "Mon": 7.0,
+    "Tue": 5.5,
+    "Wed": 6.0,
+    "Thu": 4.5,
+    "Fri": 8.0
+  },
+  "moods": [3, 5, null, 4, 2, 6],
+  "last_prompt": {
+    "mood": 6,
+    "stress": 2,
+    "location": "home",
+    "alone": false,
+    "activities": ["eating", "tv"]
+  }
+}
