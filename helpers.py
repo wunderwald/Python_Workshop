@@ -1,14 +1,3 @@
-"""Small helper functions and data for the practice notebooks."""
-
-# --- Data ---
-
-SCALE_MIN = 1
-SCALE_MAX = 7
-LOCATIONS = ["home", "work", "park"]
-
-
-# --- Functions ---
-
 def is_prime(n: int) -> bool:
     """Return whether n is a prime number."""
     if n < 2:
