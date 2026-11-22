@@ -1,0 +1,27 @@
+[
+  {
+    "participant_id": "P01",
+    "age": 24,
+    "occupation": "student"
+  },
+  {
+    "participant_id": "P02",
+    "age": 31,
+    "occupation": "nurse"
+  },
+  {
+    "participant_id": "P03",
+    "age": 45,
+    "occupation": "teacher"
+  },
+  {
+    "participant_id": "P04",
+    "age": 28,
+    "occupation": "PhD student"
+  },
+  {
+    "participant_id": "P05",
+    "age": 37,
+    "occupation": "engineer"
+  }
+]
