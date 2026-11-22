@@ -24,12 +24,6 @@ def percentage(part: float, whole: float) -> float:
     """Return part as a percentage of whole, e.g. percentage(42, 56) -> 75.0"""
     return part / whole * 100
 
-
-def reverse_score(score: int) -> int:
-    """Reverse-code a score on the rating scale, e.g. 2 -> 6 on a 1-7 scale."""
-    return SCALE_MIN + SCALE_MAX - score
-
-
 def stress_category(stress: int) -> str:
     """Return "low" (1-2), "medium" (3-5) or "high" (6-7) for a stress rating."""
     if stress <= 2:
